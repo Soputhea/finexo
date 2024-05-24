@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header class="header_section" style="background-color: blue;">
+        <header class="header_section" style="background-color: #1c126d;">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg custom_nav-container ">
                     <a class="navbar-brand" href="index.html">
@@ -17,7 +17,15 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav  ">
-                            <li class="nav-item active">
+                            <li class="nav-item" :class="{ active: $route.path == '/' }">
+                                <router-link class="nav-link" to="/">Home</router-link>
+                            </li>
+                            <li class="nav-item" :class="{ active: $route.path == '/about' }">
+                                <router-link class="nav-link" to="/about">About</router-link>
+                            </li>
+
+
+                            <!-- <li class="nav-item active">
                                 <router-link to="/">
                                     <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
                                 </router-link>
@@ -26,17 +34,28 @@
                                 <router-link to="/about">
                                     <a class="nav-link">About</a>
                                 </router-link>
-                            </li>
-                            <li class="nav-item">
+                            </li> -->
+                            <li class="nav-item" :class="{ active: $route.path == '/service' }">
                                 <router-link to="/service">
                                     <a class="nav-link">Services</a>
                                 </router-link>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="why.html">Why Us</a>
+                            <li class="nav-item" :class="{ active: $route.path == '/why' }">
+                                <router-link to="/why">
+                                    <a class="nav-link">Why US</a>
+                                </router-link>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="team.html">Team</a>
+                            <li class="nav-item" :class="{ active: $route.path == '/team' }">
+                                <router-link to="/team">
+                                    <a class="nav-link">Team</a>
+                                </router-link>
+                            </li>
+
+
+                            <li class="nav-item" :class="{ active: $route.path == '/user' }">
+                                <router-link to="/user">
+                                    <a class="nav-link">User</a>
+                                </router-link>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
