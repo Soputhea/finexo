@@ -48,7 +48,10 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
+                                <router-link to="/login">
+                                    <a class="nav-link"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
+                                </router-link>
+                                
                             </li>
                             <li class="nav-item">
                                 <router-link to="/register">
