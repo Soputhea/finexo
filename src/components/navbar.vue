@@ -49,7 +49,7 @@
 
                             <li class="nav-item">
                                 <router-link to="/login">
-                                    <a class="nav-link"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
+                                    <a class="nav-link"> <i class="fa fa-user" aria-hidden="true"></i> {{ $t('navbar.login') }} </a>
                                 </router-link>
                                 
                             </li>
