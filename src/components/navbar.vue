@@ -48,7 +48,10 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/login">{{ $t('navbar.login') }}</a>
+                                <router-link to="/login">
+                                    <a class="nav-link" >{{ $t('navbar.login') }}</a>
+                                </router-link>
+                                
                             </li>
                             <li class="nav-item">
                                 <router-link to="/register">
