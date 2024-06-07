@@ -48,10 +48,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <router-link to="/login">
-                                    <a class="nav-link" >{{ $t('navbar.login') }}</a>
-                                </router-link>
-                                
+                                <a class="nav-link" href="#"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
                             </li>
                             <li class="nav-item">
                                 <router-link to="/register">
