@@ -13,7 +13,7 @@
 
 
 <script>
-import Why_box from './why_section/why_box'
+import Why_box from './why_section/why_box.vue'
 
 export default {
   components: {
