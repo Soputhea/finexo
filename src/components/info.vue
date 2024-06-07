@@ -82,8 +82,9 @@
           <h4>
             Subscribe
           </h4>
-          <form action="#">
-            <input type="text" placeholder="Enter email" />
+          <form @submit.prevent="handleSubmit">
+            <input type="text" v-model="email" placeholder="Enter email" />
+            <my-email/>
             <button type="submit">
               Subscribe
             </button>
@@ -93,3 +94,19 @@
     </div>
   </section>
 </template>
+
+
+<script>
+export default {
+  data(){
+    return{
+      email:""
+    }
+  },
+  methods: {
+    handleSubmit(){
+      console.log(this.email);
+    }
+  },
+}
+</script>

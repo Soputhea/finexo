@@ -1,16 +1,17 @@
 <template>
   <div class="box ">
     <div class="img-box">
-      <img :src=staff.image class="img1" alt="">
+      <img src="/public/images/team-1.jpg" class="img1" alt="">
     </div>
     <div class="detail-box">
       <h5>
-        {{ staff.title }}
+        {{ usersList.name }}
       </h5>
       <p>
-        {{ staff.description }}
+        {{ usersList.email }}
       </p>
-      <p v-if="staff.quote!=null"> "{{ staff.quote }}" </p>
+      <p > {{ usersList.job }} </p>
+      
     </div>
     <div class="social_box">
       <a href="#">
@@ -35,17 +36,7 @@
 <script>
 export default {
   props: {
-    staff: {
-      type: Object,
-      default: () => {
-        return {
-          title: "",
-          description: "",
-          quote: ""
-        }
-      }
-    },
-    users: {
+    usersList: {
       type: Object,
       default: () => {
         return {

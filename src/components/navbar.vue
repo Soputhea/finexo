@@ -18,53 +18,54 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav  ">
                             <li class="nav-item" :class="{ active: $route.path == '/' }">
-                                <router-link class="nav-link" to="/">Home</router-link>
+                                <router-link class="nav-link" to="/">{{ $t('navbar.home') }}</router-link>
                             </li>
                             <li class="nav-item" :class="{ active: $route.path == '/about' }">
-                                <router-link class="nav-link" to="/about">About</router-link>
+                                <router-link class="nav-link" to="/about">{{ $t('navbar.about') }}</router-link>
                             </li>
 
-
-                            <!-- <li class="nav-item active">
-                                <router-link to="/">
-                                    <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
-                                </router-link>
-                            </li>
-                            <li class="nav-item">
-                                <router-link to="/about">
-                                    <a class="nav-link">About</a>
-                                </router-link>
-                            </li> -->
                             <li class="nav-item" :class="{ active: $route.path == '/service' }">
                                 <router-link to="/service">
-                                    <a class="nav-link">Services</a>
+                                    <a class="nav-link">{{ $t('navbar.service') }}</a>
                                 </router-link>
                             </li>
                             <li class="nav-item" :class="{ active: $route.path == '/why' }">
                                 <router-link to="/why">
-                                    <a class="nav-link">Why US</a>
+                                    <a class="nav-link">{{ $t('navbar.whyus') }}</a>
                                 </router-link>
                             </li>
                             <li class="nav-item" :class="{ active: $route.path == '/team' }">
                                 <router-link to="/team">
-                                    <a class="nav-link">Team</a>
+                                    <a class="nav-link">{{ $t('navbar.team') }}</a>
                                 </router-link>
                             </li>
 
 
                             <li class="nav-item" :class="{ active: $route.path == '/user' }">
                                 <router-link to="/user">
-                                    <a class="nav-link">User</a>
+                                    <a class="nav-link">{{ $t('navbar.user') }}</a>
                                 </router-link>
                             </li>
+
                             <li class="nav-item">
-                                <a class="nav-link" href="#"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
+                                <a class="nav-link" href="/login">{{ $t('navbar.login') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <router-link to="/register">
+                                <a class="nav-link"> <i class="fa fa-user" aria-hidden="true"></i> {{ $t('navbar.register') }}</a>
+                                </router-link>
                             </li>
                             <form class="form-inline">
                                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </button>
                             </form>
+
+                            <div class="form-inline">
+                                <button @click="changeLanguage('en')">English</button>
+                                <button @click="changeLanguage('km')">Khmer</button>
+                            </div>
+                            
                         </ul>
                     </div>
                 </nav>
@@ -72,3 +73,18 @@
         </header>
     </div>
 </template>
+
+
+<script>
+export default{
+    methods:{
+        changeLanguage(){
+            if(this.$i18n.locale == "en"){
+                this.$i18n.locale ="km";
+            }else{
+                this.$i18n.locale= "en";
+            }
+        }
+    }
+}
+</script>

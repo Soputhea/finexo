@@ -8,25 +8,28 @@
                             <div class="col-md-6 ">
                                 <div class="detail-box">
                                     <h1>
-                                        Crypto <br>
-                                        Currency
+                                        {{ $t('message.hello') }} <br>
+                                        {{ $t('message.crypto') }} {{ count }}
                                     </h1>
                                     <p>
-                                        Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam
-                                        fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat
-                                        molestias, veniam, vel architecto veritatis delectus repellat modi impedit
-                                        sequi.
+                                        {{ $t('subTitle') }}
                                     </p>
                                     <div class="btn-box">
-                                        <a href="" class="btn1">
-                                            Read More
+                                        <a class="btn1" @click="increment">
+                                            Increase
                                         </a>
                                     </div>
+                                    <div class="btn-box">
+                                        <a class="btn1" @click="decrement">
+                                            Decrease
+                                        </a>
+                                    </div>
+                                    
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="img-box">
-                                    <img src="images/slider-img.png" alt="">
+                                    <img src="/public/images/slider-img.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -56,7 +59,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="img-box">
-                                    <img src="images/slider-img.png" alt="">
+                                    <img src="/public/images/slider-img.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -86,7 +89,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="img-box">
-                                    <img src="images/slider-img.png" alt="">
+                                    <img src="/public/images/slider-img.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -102,3 +105,18 @@
 
     </section>
 </template>
+
+
+<script>
+import { useCounterStore } from '@/store/pinia'
+import { mapState, mapActions } from 'pinia'
+
+export default {
+  computed:{
+    ...mapState(useCounterStore, ['count']),
+  },
+  methods:{
+    ...mapActions(useCounterStore, ['increment','decrement']),
+  }
+}
+</script>

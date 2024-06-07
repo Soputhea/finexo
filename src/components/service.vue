@@ -22,7 +22,8 @@
 
 <script>
 
-import service_box from './service_section/service_box'
+//import service_box from './service_section/service_box'
+import service_box from './service_section/service_box.vue';
 
 export default {
   components: {

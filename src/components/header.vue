@@ -3,16 +3,17 @@
 
         <div class="hero_bg_box">
             <div class="bg_img_box">
-                <img src="images/hero-bg.png" alt="">
+                <img src="/public/images/hero-bg.png" alt="">
             </div>
         </div>
+        
         <Slide />
     </div>
 </template>
 
 <script>
 
-import Slide from './header/slide'
+import Slide from "@/components/header/slide.vue"
 
 export default {
     components: {
