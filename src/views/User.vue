@@ -23,6 +23,19 @@
 </template>
 
 
+<!-- <script setup>
+import { ref, onMounted } from 'vue'
+import UserBox from '../components/user/user_box.vue'
+import { useUsersStore } from '@/store/user.js'
+import { mapState, mapActions } from 'pinia'
+const store = useUsersStore();
+onMounted(async () => {
+    await store.fetchUsers()
+})
+
+
+</script> -->
+
 <script>
 
 import UserBox from '../components/user/user_box.vue'

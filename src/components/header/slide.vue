@@ -17,6 +17,7 @@
                                     <div class="btn-box">
                                         <a class="btn1" @click="increment">
                                             Increase
+                                            d
                                         </a>
                                     </div>
                                     <div class="btn-box">
