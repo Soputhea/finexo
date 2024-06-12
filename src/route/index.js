@@ -8,6 +8,7 @@ import About from '@/views/About.vue'
 import Home from '@/views/Home.vue'
 import Login from '@/views/Login.vue'
 import User from '@/views/User.vue'
+import NotFound from '@/views/NotFound.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
@@ -27,6 +28,7 @@ const routes = [
       path: '/multiple', 
       component: UploadMultiple,
      },
+     { path:'/:pathMatch(.*)*', component: NotFound }
 ]
 
 const router = createRouter({
